@@ -13,7 +13,9 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  // mainWindow.loadFile('index.html')
+  mainWindow.loadURL("http://localhost:3000/")
+  mainWindow.focus();
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
@@ -41,3 +43,5 @@ app.on('window-all-closed', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+require("./server.js");
